@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+	printf("Please input a sentence:\n");
+	char s[100];
+	gets(s);
+	printf("Please input a keywords:\n");
+	char kw[10];
+	gets(kw);
+	strlwr(s);
+	strlwr(kw);
+	
+	int number=0;
+	for(int i=0;s[i]!='\0';i++)
+	{
+	    for(int j=0;kw[j]!='\0';j++)
+		{
+		    if(s[i]==kw[j])
+			{
+		    	number++;
+	    		continue;
+			}
+		}
+		
+	}
+	printf("The number of keywords is: %d\n",number);
+ 	return 0;
+}
